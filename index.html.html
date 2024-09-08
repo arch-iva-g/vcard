@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .info {
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Updated with provided information -->
+    <h1>арх. Ива Горчева</h1>
+    <div class="info">
+      <p>Phone: <span id="phoneNumber">+359 879 019 619</span></p>
+      <p>Email: arch.iva.gorcheva@gmail.com</p>
+    </div>
+    
+    <!-- Add Contact Button -->
+    <a id="dialButton" href="tel:+359879019619">
+      <button>Add Contact</button>
+    </a>
+  </div>
+
+  <script>
+    // Provided phone number
+    const phoneNumber = "+359 879 019 619";
+    
+    // Convert phone number to a format usable by the dialer
+    const cleanPhoneNumber = phoneNumber.replace(/\D/g, '');
+    
+    // Update the 'href' attribute of the link dynamically
+    document.getElementById("dialButton").setAttribute("href", "tel:" + cleanPhoneNumber);
+  </script>
+
+</body>
+</html>
+
